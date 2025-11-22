@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>StarBlaze</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>StarBlaze</h1>
+    <h2>A Retro Space War Game</h2>
+    <p>A Minor Project created by Ritwik Upadhyay, Sarvagya Singhal, Sachin Baghri, and Riya Palod.</p>
+  </header>
+
+  <!-- GAME WRAPPER -->
+  <div id="gameWrapper">
+    <canvas id="gameCanvas" width="390" height="600"></canvas>
+
+    <!-- live score -->
+    <div id="liveScore">0</div>
+
+    <!-- player and alien (single alien as before) -->
+    <div class="player" id="player">
+      <img src="StarBlaze Assets/Visual Assets/Player Assets/p_ship.png" alt="player">
+    </div>
+
+    <div class="alien" id="alien">
+      <img src="alien.png" alt="alien">
+    </div>
+
+    <!-- controls inside wrapper for perfect alignment -->
+    <div id="controls">
+      <div class="left-area">
+        <button id="leftBtn"><img src="leftt.png" class="btnImg" alt="left"></button>
+      </div>
+
+      <div class="center-area">
+        <button id="shootBtn" class="shoot"><img src="shoot.png" class="btnImg" alt="shoot"></button>
+      </div>
+
+      <div class="right-area">
+        <button id="rightBtn"><img src="right.png" class="btnImg" alt="right"></button>
+      </div>
+    </div>
+
+    <!-- top-right pause/play -->
+    <div id="pauseControls">
+      <button id="pauseBtn"><img src="pause.png" class="pauseImg" alt="pause"></button>
+      <button id="playBtn"><img src="play.png" class="pauseImg" alt="play"></button>
+    </div>
+
+    <!-- countdown overlay -->
+    <div id="countdownScreen"><h1 id="countdownText">3</h1></div>
+  </div>
+
+  <!-- result modal -->
+  <div id="result">
+    <h1>Game Over</h1>
+    <p id="score">score: 0</p>
+    <button id="btn" onclick="location.reload()">Restart</button>
+  </div>
+
+  <!-- background music (optional: change path) -->
+  <audio id="bgMusic" src="StarBlaze Assets/Audio Assets/Tracks/StarBlaze Score Composition .wav" loop></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
